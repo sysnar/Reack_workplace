@@ -8,8 +8,8 @@ class Subject extends Component {
         <h1><a href="/" onClick={function(e) {
           console.log(e);
           e.preventDefault();
-          // alert('hello react');
-        }}>{this.props.title}</a></h1>
+          this.props.onChangePage();
+        }.bind(this)}>{this.props.title}</a></h1>
         {this.props.sub}
       </header>
     )
